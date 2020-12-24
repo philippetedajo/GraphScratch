@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import { MenuOverlay } from "../components";
 
 const Header = () => {
+  const [menuState, setMenuState] = useState(false);
+
+  const handleToggleMenu = () => {
+    setMenuState(!menuState);
+    console.log(menuState);
+  };
+
   return (
-    <div className="px-10 py-2 flex justify-between">
+    <div className="px-10 py-2 flex justify-between ">
       <div className="flex items-center">
         <Link href="/">
           <a className="text-2xl">Nextwind</a>
         </Link>
       </div>
-      <ul className="text-lg flex items-center">
+      <MenuOverlay menuState={menuState} setMenuState={setMenuState} />
+      <ul className="text-lg items-center hidden lg:flex">
         <li>
           <Link href="/about">
             <a className="mr-5">About</a>
@@ -26,7 +35,7 @@ const Header = () => {
           </Link>
         </li>
       </ul>
-      <ul className="text-lg flex items-center">
+      <ul className="text-lg flex items-center hidden lg:flex">
         <li>
           <Link href="/login">
             <a className="mr-5">Login</a>
@@ -38,6 +47,13 @@ const Header = () => {
           </Link>
         </li>
       </ul>
+      <button
+        onClick={handleToggleMenu}
+        className={`lg:hidden z-10 ${menuState ? "menu-close" : " "} `}
+        style={{ color: "red" }}
+      >
+        open/close
+      </button>
     </div>
   );
 };
