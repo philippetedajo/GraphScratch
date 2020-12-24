@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b20b8066-a01c-4f73-9de8-571e648a1eba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/MenuOverlay.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MenuOverlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MenuOverlay.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +43,7 @@
       <updated>1608745164826</updated>
       <workItem from="1608745166120" duration="3089000" />
       <workItem from="1608749325120" duration="56000" />
-      <workItem from="1608749383823" duration="12738000" />
+      <workItem from="1608749383823" duration="12953000" />
     </task>
     <task id="LOCAL-00001" summary="initialise tailwind css">
       <created>1608748785167</created>
@@ -62,7 +59,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608749878564</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <created>1608853533827</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608853533827</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

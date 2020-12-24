@@ -13,13 +13,16 @@ const MenuOverlay = ({ menuState, setMenuState }) => {
           : "lg:hidden w-0 fixed bg-black text-white h-full z-10 w-0 top-0 right-0 overflow-x-hidden helloworld transition-all ease-in-out duration-700"
       }
     >
-      <div className="border border-red-500 relative top-1/4 flex flex-col items-center">
+      <div className="border border-red-500 relative top-1/4 flex flex-col ">
         <Link href="/about">
           <a className="mr-5">About</a>
         </Link>
-        <a href="#">xxxxx</a>
-        <a href="#">xxxx</a>
-        <a href="#">xxxxx</a>
+        <Link href="/contact">
+          <a className="mr-5">Contact</a>
+        </Link>
+        <Link href="/privacy">
+          <a>Privacy</a>
+        </Link>
       </div>
     </div>
   );
