@@ -13,9 +13,6 @@ const MenuOverlay = ({ menuState, setMenuState }) => {
           : "fixed"
       }
       onClick={() => setMenuState(false)}
-      style={{
-        opacity: 0.7,
-      }}
     >
       <div
         className={
@@ -25,14 +22,23 @@ const MenuOverlay = ({ menuState, setMenuState }) => {
         }
       >
         <div className="relative top-14 flex flex-col items-end pr-10">
+          <Link href="/">
+            <a className="text-xl my-3 cursor-pointer">Home</a>
+          </Link>
           <Link href="/about">
             <a className="text-xl my-3 cursor-pointer">About</a>
+          </Link>
+          <Link href="/news">
+            <a className="text-xl my-3 cursor-pointer">News</a>
           </Link>
           <Link href="/contact">
             <a className="text-xl my-3 cursor-pointer">Contact</a>
           </Link>
-          <Link href="/privacy">
-            <a className="text-xl my-3 cursor-pointer">Privacy</a>
+          <Link href="/login">
+            <a className="text-xl my-3 cursor-pointer ">Login</a>
+          </Link>
+          <Link href="/register">
+            <a className="text-xl my-3 cursor-pointer">Register</a>
           </Link>
         </div>
       </div>

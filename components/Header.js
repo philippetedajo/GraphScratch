@@ -52,7 +52,7 @@ const Header = () => {
         {menuState ? (
           <IoCloseSharp
             onClick={handleToggleMenu}
-            fill="#f7f3f0"
+            fill="#fff"
             size={26}
             className="menu-close cursor-pointer transition-all"
           />

@@ -5,7 +5,7 @@ module.exports = {
     extend: {},
     textColor: {
       primary: "#000000",
-      secondary: "#f7f3f0",
+      secondary: "#ffffff",
     },
   },
   variants: {
