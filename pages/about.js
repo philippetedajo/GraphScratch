@@ -1,9 +1,11 @@
 import PageTemplate from "../templates/page.template";
+import useTranslation from "../intl/useTranslation";
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <div>
-      <h1 className="text-6xl">About</h1>
+      <h1 className="text-6xl">{t("about")}</h1>
       <p>
         quo minus id quod maxime placeat facere possimus, omnis voluptas
         assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et

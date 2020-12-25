@@ -5,6 +5,7 @@ import useTranslation from "../intl/useTranslation";
 
 const Footer = () => {
   const { locale, setLocale } = useContext(LangContext);
+  const { t } = useTranslation();
 
   const switchToEn = () => {
     setLocale("en");
@@ -24,7 +25,7 @@ const Footer = () => {
         </li>
         <li>
           <Link href="/privacy">
-            <a>Privacy policies</a>
+            <a>{t("privacy")}</a>
           </Link>
         </li>
       </ul>
