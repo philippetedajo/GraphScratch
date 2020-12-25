@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { MenuOverlay } from "../components";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoCloseSharp } from "react-icons/io5";
 
 const Header = () => {
   const [menuState, setMenuState] = useState(false);
 
   const handleToggleMenu = () => {
     setMenuState(!menuState);
-    console.log(menuState);
   };
 
   return (
@@ -47,23 +48,22 @@ const Header = () => {
           </Link>
         </li>
       </ul>
-      {menuState ? (
-        <button
-          onClick={handleToggleMenu}
-          className="lg:hidden z-10 menu-close"
-          style={{ color: "red" }}
-        >
-          close
-        </button>
-      ) : (
-        <button
-          onClick={handleToggleMenu}
-          className="lg:hidden z-10"
-          style={{ color: "red" }}
-        >
-          open
-        </button>
-      )}
+      <div className="flex items-center lg:hidden z-10">
+        {menuState ? (
+          <IoCloseSharp
+            onClick={handleToggleMenu}
+            fill="#fff"
+            size={26}
+            className="menu-close cursor-pointer transition-all"
+          />
+        ) : (
+          <GiHamburgerMenu
+            onClick={handleToggleMenu}
+            size={23}
+            className="cursor-pointer transition-all"
+          />
+        )}
+      </div>
     </div>
   );
 };
