@@ -1,20 +1,18 @@
 import Head from "next/head";
 import PageTemplate from "../templates/page.template";
+import useTranslation from "../intl/useTranslation";
 
 const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <div>
       <Head>
-        <title>NextWind</title>
+        <title>Nextwind</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex justify-center">
-        <p className="mt-20 text-5xl text-center w-2/3">
-          Nextwind est un boilerplate Next Js complet concue avec Tailwind css,
-          permettant de demarrer rapidement un projet Next js, il dispose pour
-          le moment d'un module de traduction, d'un systeme d'authentification
-          et de quelques pages prefabriquer avec soin.
-        </p>
+        <p className="mt-20 text-5xl text-center w-2/3">{t("intro")}</p>
       </div>
     </div>
   );

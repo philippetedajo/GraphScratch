@@ -1,5 +1,6 @@
 import Router from "next/router";
 import NProgress from "nprogress";
+import { LangProvider } from "../intl/LangProvider";
 import "tailwindcss/tailwind.css";
 import "../styles/global.css";
 import "nprogress/nprogress.css";
@@ -12,9 +13,11 @@ function MyApp({ Component, pageProps }) {
   Router.events.on("routeChangeError", () => NProgress.done());
 
   return (
-    <Template>
-      <Component {...pageProps} />
-    </Template>
+    <LangProvider>
+      <Template>
+        <Component {...pageProps} />
+      </Template>
+    </LangProvider>
   );
 }
 
