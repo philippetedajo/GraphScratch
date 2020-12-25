@@ -47,13 +47,23 @@ const Header = () => {
           </Link>
         </li>
       </ul>
-      <button
-        onClick={handleToggleMenu}
-        className={`lg:hidden z-10 ${menuState ? "menu-close" : " "} `}
-        style={{ color: "red" }}
-      >
-        open/close
-      </button>
+      {menuState ? (
+        <button
+          onClick={handleToggleMenu}
+          className="lg:hidden z-10 menu-close"
+          style={{ color: "red" }}
+        >
+          close
+        </button>
+      ) : (
+        <button
+          onClick={handleToggleMenu}
+          className="lg:hidden z-10"
+          style={{ color: "red" }}
+        >
+          open
+        </button>
+      )}
     </div>
   );
 };
