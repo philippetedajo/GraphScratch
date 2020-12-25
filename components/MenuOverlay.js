@@ -9,16 +9,20 @@ const MenuOverlay = ({ menuState, setMenuState }) => {
     <div
       className={
         menuState
-          ? "lg:hidden fixed top-0 right-0 h-full w-full border border-red-500 z-10"
+          ? "lg:hidden fixed top-0 right-0 h-full w-full z-10 text-secondary"
           : "fixed"
       }
       onClick={() => setMenuState(false)}
+      style={{
+        // backdropFilter: "blur(3px)",
+        opacity: 0.7,
+      }}
     >
       <div
         className={
           menuState
-            ? "lg:hidden w-80 fixed bg-black text-white h-full z-10 top-0 right-0 overflow-x-hidden transition-all ease-in-out duration-700"
-            : "lg:hidden w-0 fixed bg-black text-white h-full z-10 top-0 right-0 overflow-x-hidden transition-all ease-in-out duration-700"
+            ? "lg:hidden w-80 fixed bg-black h-full z-10 top-0 right-0 overflow-x-hidden transition-all ease-in-out duration-700"
+            : "lg:hidden w-0 fixed bg-black h-full z-10 top-0 right-0 overflow-x-hidden transition-all ease-in-out duration-700"
         }
       >
         <div className="relative top-14 flex flex-col items-end pr-10">

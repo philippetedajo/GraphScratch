@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <div className="px-10 py-2 flex justify-between ">
+    <div className="px-10 py-4 flex justify-between ">
       <div className="flex items-center">
         <Link href="/">
           <a className="text-2xl">Nextwind</a>
@@ -52,7 +52,7 @@ const Header = () => {
         {menuState ? (
           <IoCloseSharp
             onClick={handleToggleMenu}
-            fill="#fff"
+            fill="#f7f3f0"
             size={26}
             className="menu-close cursor-pointer transition-all"
           />
