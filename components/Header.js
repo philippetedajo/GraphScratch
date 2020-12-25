@@ -15,7 +15,7 @@ const Header = () => {
     <div className="px-10 py-4 flex justify-between ">
       <div className="flex items-center">
         <Link href="/">
-          <a className="text-2xl">Nextwind</a>
+          <h1 className="text-2xl cursor-pointer">Nw</h1>
         </Link>
       </div>
       <MenuOverlay menuState={menuState} setMenuState={setMenuState} />
@@ -26,13 +26,13 @@ const Header = () => {
           </Link>
         </li>
         <li>
-          <Link href="/contact">
-            <a className="mr-5">Contact</a>
+          <Link href="/news">
+            <a className="mr-5">News</a>
           </Link>
         </li>
         <li>
-          <Link href="/privacy">
-            <a>Privacy</a>
+          <Link href="/contact">
+            <a>Contact</a>
           </Link>
         </li>
       </ul>
