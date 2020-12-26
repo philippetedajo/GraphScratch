@@ -9,24 +9,27 @@ const Login = () => {
       <h1 className="mb-10 mt-16">{t("login_title")}</h1>
       <h2>{t("login_subtitle")}</h2>
       <p className="mt-2 mb-5 text-fourth ">{t("login_message")}</p>
-      <div className="flex flex-col">
-        <label>{t("login_user")}</label>
+      <div className="flex flex-col mb-3">
+        <label>{t("user")}</label>
         <input
           className="btn-form my-2"
           type="text"
-          placeholder={t("login_email")}
+          placeholder={t("username")}
         />
       </div>
       <div className="flex flex-col">
-        <label>{t("login_passord")}</label>
+        <label>{t("password")}</label>
         <input
           className="btn-form my-2"
-          type="text"
-          placeholder={t("login_passord")}
+          type="password"
+          placeholder={t("password")}
         />
       </div>
-      <p>asdfadsf</p>
-      <div className="btn border-2 border-third bg-third text-secondary  my-5">
+      <div className="flex items-center mb-5 text-xs">
+        <input className="mr-2" type="checkbox" />
+        <span className="text-fourth"> {t("remember")}</span>
+      </div>
+      <div className="btn border-2 border-third bg-third text-secondary my-8">
         {t("login_in")}
       </div>
       <p className="my-5 text-center">
