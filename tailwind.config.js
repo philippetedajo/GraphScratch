@@ -4,9 +4,10 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      primary: "black",
+      primary: "#000",
       secondary: "#fff",
       third: "#3e6ae1",
+      fourth: "#a1a1aa",
     },
     fontFamily: {
       ddin: ["ddin", "serif"],

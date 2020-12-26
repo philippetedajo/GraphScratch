@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import Link from "next/link";
 import { LangContext } from "../intl/LangProvider";
 import useTranslation from "../intl/useTranslation";
-import ActiveLink from "../utils/Links";
 
 const Footer = () => {
   const { locale, setLocale } = useContext(LangContext);
@@ -24,7 +23,7 @@ const Footer = () => {
       className="px-10 flex flex-col-reverse items-center lg:flex-row lg:justify-between lg:items-center"
       style={{ height: "50px" }}
     >
-      <ul className="flex">
+      <ul className="flex flex-col text-center sm:flex-row">
         <li>
           <p className="mr-2.5 lg:mr-10">@2020 Nextwind </p>
         </li>

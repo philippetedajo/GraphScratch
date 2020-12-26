@@ -29,6 +29,16 @@ export const LangStrings = {
     privacy_agreement_title: "Entire Agreement",
     privacy_agreement_content:
       "These Terms constitute the entire agreement between Company Name and you in relation to your use of this Website, and supersede all prior agreements and understandings.",
+    //login_page
+    login_title: "Login",
+    login_subtitle: "Login to your account",
+    login_message: "Happy to meet you again",
+    login_user: "Username",
+    login_email: "Email or phone number",
+    login_passord: "Password",
+    login_in: "SIGN IN",
+    No_account: "Don't have an account yet ?",
+    no_account_join: "Join",
   },
   fr: {
     //header
@@ -61,5 +71,15 @@ export const LangStrings = {
     privacy_agreement_title: "Accord complet",
     privacy_agreement_content:
       "Ces conditions constituent l'intégralité de l'accord entre le nom de la société et vous en ce qui concerne votre utilisation de ce site Web, et remplacent tous les accords et accords antérieurs.",
+    //login_page
+    login_title: "Connexion",
+    login_subtitle: "Connectez-vous à votre compte",
+    login_message: "Heureux de vous revoir",
+    login_user: "Nom d'utilisateur",
+    login_email: "Email ou numéro de téléphone",
+    login_passord: "Mot de passe",
+    login_in: "SE CONNECTER",
+    No_account: "Vous n'avez pas encore de compte ?",
+    no_account_join: "Nous rejoindre",
   },
 };

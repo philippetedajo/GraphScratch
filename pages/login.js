@@ -1,7 +1,40 @@
 import AuthTemplate from "../templates/auth.template";
+import useTranslation from "../intl/useTranslation";
 
 const Login = () => {
-  return <div className="btn border-2 border-primary">Login</div>;
+  const { t } = useTranslation();
+
+  return (
+    <form className="w-96">
+      <h1 className="mb-10 mt-16">{t("login_title")}</h1>
+      <h2>{t("login_subtitle")}</h2>
+      <p className="mt-2 mb-5 text-fourth ">{t("login_message")}</p>
+      <div className="flex flex-col">
+        <label>{t("login_user")}</label>
+        <input
+          className="btn-form my-2"
+          type="text"
+          placeholder={t("login_email")}
+        />
+      </div>
+      <div className="flex flex-col">
+        <label>{t("login_passord")}</label>
+        <input
+          className="btn-form my-2"
+          type="text"
+          placeholder={t("login_passord")}
+        />
+      </div>
+      <p>asdfadsf</p>
+      <div className="btn border-2 border-third bg-third text-secondary  my-5">
+        {t("login_in")}
+      </div>
+      <p className="my-5 text-center">
+        {t("No_account")}
+        <span className="text-third"> {t("no_account_join")}</span>
+      </p>
+    </form>
+  );
 };
 
 export default Login;
