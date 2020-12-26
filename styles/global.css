@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /*  */
 @font-face {
   font-family: "ddin";
@@ -11,9 +15,5 @@
 
 /*  */
 body {
-  font-family: ddinbold, serif;
-  background: #ffffff;
-}
-p , a{
   font-family: ddin, serif;
 }

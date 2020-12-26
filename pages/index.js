@@ -12,7 +12,9 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex justify-center">
-        <p className="mt-20 text-5xl text-center w-2/3">{t("intro")}</p>
+        <p className="mt-20 text-5xl text-center w-2/3">
+          {t("home_intro_content")}
+        </p>
       </div>
     </div>
   );
