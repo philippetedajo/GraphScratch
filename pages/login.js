@@ -34,7 +34,7 @@ const Login = () => {
       </div>
       <p className="my-5 text-center">
         {t("No_account")}
-        <span className="text-third"> {t("no_account_join")}</span>
+        <span className="text-third "> {t("no_account_join")}</span>
       </p>
     </form>
   );
