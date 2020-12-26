@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/*  */
+/* Fonts */
 @font-face {
   font-family: "ddin";
   src: local("ddin"), url("/fonts/d-din.regular.ttf") format("truetype");
@@ -13,7 +13,13 @@
   src: local("ddinbold"), url("/fonts/d-din.bold.ttf") format("truetype");
 }
 
-/*  */
+/* General */
 body {
   font-family: ddin, serif;
+}
+h1 {
+  @apply text-6xl mt-5 font-ddinbold;
+}
+.btn {
+  @apply rounded py-2 px-5 uppercase text-xs cursor-pointer;
 }

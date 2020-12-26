@@ -4,6 +4,7 @@ import { MenuOverlay } from "../components";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import useTranslation from "../intl/useTranslation";
+import ActiveLink from "../utils/Links";
 
 const Header = () => {
   const [menuState, setMenuState] = useState(false);
@@ -16,38 +17,38 @@ const Header = () => {
   return (
     <div className="px-10 py-4 flex justify-between ">
       <div className="flex items-center">
-        <Link href="/">
+        <ActiveLink activeClassName="text-third" href="/">
           <a className="text-2xl cursor-pointer">Nextwind</a>
-        </Link>
+        </ActiveLink>
       </div>
       <MenuOverlay menuState={menuState} setMenuState={setMenuState} />
       <ul className="text-lg items-center hidden lg:flex">
         <li>
-          <Link href="/about">
+          <ActiveLink activeClassName="text-third" href="/about">
             <a className="mr-5">{t("about")}</a>
-          </Link>
+          </ActiveLink>
         </li>
         <li>
-          <Link href="/news">
+          <ActiveLink activeClassName="text-third" href="/news">
             <a className="mr-5">{t("news")}</a>
-          </Link>
+          </ActiveLink>
         </li>
         <li>
-          <Link href="/contact">
+          <ActiveLink activeClassName="text-third" href="/contact">
             <a>{t("contact")}</a>
-          </Link>
+          </ActiveLink>
         </li>
       </ul>
       <ul className="text-lg flex items-center hidden lg:flex">
         <li>
-          <Link href="/login">
+          <ActiveLink activeClassName="text-third" href="/login">
             <a className="mr-5">{t("login")}</a>
-          </Link>
+          </ActiveLink>
         </li>
         <li>
-          <Link href="/register">
+          <ActiveLink activeClassName="text-third" href="/register">
             <a className="">{t("register")}</a>
-          </Link>
+          </ActiveLink>
         </li>
       </ul>
       <div className="flex items-center lg:hidden z-10">

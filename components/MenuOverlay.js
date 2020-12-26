@@ -19,8 +19,8 @@ const MenuOverlay = ({ menuState, setMenuState }) => {
       <div
         className={
           menuState
-            ? "lg:hidden w-80 fixed bg-black h-full z-20 top-0 right-0 overflow-x-hidden transition-all ease-in-out duration-700"
-            : "lg:hidden w-0 fixed bg-black h-full z-20 top-0 right-0 overflow-x-hidden transition-all ease-in-out duration-700"
+            ? "lg:hidden w-80 fixed bg-primary h-full z-20 top-0 right-0 overflow-x-hidden transition-all ease-in-out duration-700"
+            : "lg:hidden w-0 fixed bg-primary h-full z-20 top-0 right-0 overflow-x-hidden transition-all ease-in-out duration-700"
         }
       >
         <div className="relative top-14 flex flex-col items-end pr-10">

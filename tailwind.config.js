@@ -3,13 +3,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
+    colors: {
+      primary: "black",
+      secondary: "#fff",
+      third: "#3e6ae1",
+    },
     fontFamily: {
       ddin: ["ddin", "serif"],
       ddinbold: ["ddinbold", "serif"],
-    },
-    textColor: {
-      primary: "#000000",
-      secondary: "#ffffff",
     },
   },
   variants: {
