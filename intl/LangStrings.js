@@ -11,10 +11,10 @@ export const LangStrings = {
     privacy: "Privacy policies",
     //home_page
     home_intro_content:
-      "Nextwind is a complete Next Js boilerplate designed with Tailwind css, allowing you to quickly start a Next js project, it hasthe moment of a translation module, an authentication systemand a few pages to prefabricate with care.",
+      "Nextwind is a complete Next Js boilerplate designed with Tailwind css, allowing you to quickly start a Next js project, it hasthe moment of a translation module, an authentication systemand a few pages.",
     //about_page
     about_intro_content:
-      "Nextwind is a complete Next Js boilerplate designed with Tailwind css, allowing you to quickly start a Next js project, it hasthe moment of a translation module, an authentication systemand a few pages to prefabricate with care.",
+      "Nextwind is a complete Next Js boilerplate designed with Tailwind css, allowing you to quickly start a Next js project, it hasthe moment of a translation module, an authentication systemand a few pages.",
     //news_page
     news_intro_content: "Find all the news about Nextwind.",
     //contact_page
@@ -64,10 +64,10 @@ export const LangStrings = {
     privacy: "Politiques de confidentialité",
     //home_page
     home_intro_content:
-      "Nextwind est un boilerplate Next Js complet concue avec Tailwind css, permettant de demarrer rapidement un projet Next js, il dispose pour le moment d'un module de traduction, d'un systeme d'authentification et de quelques pages prefabriquer avec soin.",
+      "Nextwind est un boilerplate Next Js complet concue avec Tailwind css, permettant de demarrer rapidement un projet Next js, il dispose pour le moment d'un module de traduction, d'un systeme d'authentification et de quelques pages.",
     //about_page
     about_intro_content:
-      "Nextwind est un boilerplate Next Js complet concue avec Tailwind css, permettant de demarrer rapidement un projet Next js, il dispose pour le moment d'un module de traduction, d'un systeme d'authentification et de quelques pages prefabriquer avec soin.",
+      "Nextwind est un boilerplate Next Js complet concue avec Tailwind css, permettant de demarrer rapidement un projet Next js, il dispose pour le moment d'un module de traduction, d'un systeme d'authentification et de quelques pages.",
     //news_page
     news_intro_content:
       "Retrouver l'ensemble de l'actualité concernant Nextwind.",
