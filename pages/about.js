@@ -1,12 +1,14 @@
 import PageTemplate from "../templates/page.template";
-import useTranslation from "../intl/useTranslation";
 
 const About = () => {
-  const { t } = useTranslation();
   return (
     <div>
-      <h1>{t("about")}</h1>
-      <p className="w-1/2 mt-5">{t("about_intro_content")}</p>
+      <h1>About</h1>
+      <p className="w-1/2 mt-5">
+        Nextwind is a complete Next Js boilerplate designed with Tailwind css,
+        allowing you to quickly start a Next js project, it currently has a an
+        authentication layout and few pages.
+      </p>
     </div>
   );
 };

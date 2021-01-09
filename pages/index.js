@@ -1,10 +1,7 @@
 import Head from "next/head";
 import PageTemplate from "../templates/page.template";
-import useTranslation from "../intl/useTranslation";
 
 const Home = () => {
-  const { t } = useTranslation();
-
   return (
     <div>
       <Head>
@@ -13,7 +10,9 @@ const Home = () => {
       </Head>
       <div className="flex justify-center">
         <p className="mt-14 text-2xl md:text-4xl text-center w-2/3">
-          {t("home_intro_content")}
+          Nextwind is a complete Next Js boilerplate designed with Tailwind css,
+          allowing you to quickly start a Next js project, it currently has a an
+          authentication layout and few pages.
         </p>
       </div>
     </div>

@@ -1,10 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Router from "next/router";
-import useTranslation from "../intl/useTranslation";
 
 const MenuOverlay = ({ menuState, setMenuState }) => {
-  const { t } = useTranslation();
   Router.events.on("routeChangeStart", () => setMenuState(false));
 
   return (
@@ -25,22 +23,22 @@ const MenuOverlay = ({ menuState, setMenuState }) => {
       >
         <div className="relative top-14 flex flex-col items-end pr-10">
           <Link href="/">
-            <a className="text-xl my-3 cursor-pointer">{t("home")}</a>
+            <a className="text-xl my-3 cursor-pointer">Home</a>
           </Link>
           <Link href="/about">
-            <a className="text-xl my-3 cursor-pointer">{t("about")}</a>
+            <a className="text-xl my-3 cursor-pointer">About</a>
           </Link>
           <Link href="/news">
-            <a className="text-xl my-3 cursor-pointer">{t("news")}</a>
+            <a className="text-xl my-3 cursor-pointer">News</a>
           </Link>
           <Link href="/contact">
-            <a className="text-xl my-3 cursor-pointer">{t("contact")}</a>
+            <a className="text-xl my-3 cursor-pointer">Contact</a>
           </Link>
           <Link href="/login">
-            <a className="text-xl my-3 cursor-pointer ">{t("login")}</a>
+            <a className="text-xl my-3 cursor-pointer ">Login</a>
           </Link>
           <Link href="/register">
-            <a className="text-xl my-3 cursor-pointer">{t("register")}</a>
+            <a className="text-xl my-3 cursor-pointer">Register</a>
           </Link>
         </div>
       </div>

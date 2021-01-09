@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-import Link from "next/link";
 import { MenuOverlay } from "../components";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
-import useTranslation from "../intl/useTranslation";
 import ActiveLink from "../utils/Links";
 
 const Header = () => {
   const [menuState, setMenuState] = useState(false);
-  const { t } = useTranslation();
 
   const handleToggleMenu = () => {
     setMenuState(!menuState);
@@ -25,29 +22,29 @@ const Header = () => {
       <ul className="text-lg items-center hidden lg:flex">
         <li>
           <ActiveLink activeClassName="text-third" href="/about">
-            <a className="mr-5">{t("about")}</a>
+            <a className="mr-5">About</a>
           </ActiveLink>
         </li>
         <li>
           <ActiveLink activeClassName="text-third" href="/news">
-            <a className="mr-5">{t("news")}</a>
+            <a className="mr-5">News</a>
           </ActiveLink>
         </li>
         <li>
           <ActiveLink activeClassName="text-third" href="/contact">
-            <a>{t("contact")}</a>
+            <a>Contact</a>
           </ActiveLink>
         </li>
       </ul>
       <ul className="text-lg flex items-center hidden lg:flex">
         <li>
           <ActiveLink activeClassName="text-third" href="/login">
-            <a className="mr-5">{t("login")}</a>
+            <a className="mr-5">Login</a>
           </ActiveLink>
         </li>
         <li>
           <ActiveLink activeClassName="text-third" href="/register">
-            <a className="">{t("register")}</a>
+            <a className="">Register</a>
           </ActiveLink>
         </li>
       </ul>

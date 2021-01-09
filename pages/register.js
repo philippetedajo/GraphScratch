@@ -1,53 +1,57 @@
 import AuthTemplate from "../templates/auth.template";
-import useTranslation from "../intl/useTranslation";
+import Router from "next/router";
+import { BiArrowBack } from "react-icons/bi";
 
 const Register = () => {
-  const { t } = useTranslation();
   return (
-    <form className="w-96">
-      <h1 className="mb-10 mt-16">{t("register_title")}</h1>
-      <h2>{t("register_subtitle")}</h2>
-      <p className="mt-2 mb-5 text-fourth ">{t("register_message")}</p>
-      <div className="flex flex-col mb-3">
-        <label>{t("user")}</label>
-        <input
-          className="btn-form my-2"
-          type="text"
-          placeholder={t("username")}
-        />
+    <div>
+      <div
+        className="absolute flex items-center left-0 ml-10 mt-5 cursor-pointer text-third"
+        onClick={() => Router.back()}
+      >
+        <BiArrowBack className="mr-2" /> back
       </div>
 
-      <div className="flex flex-col mb-3">
-        <label>{t("password")}</label>
-        <input
-          className="btn-form my-2"
-          type="password"
-          placeholder={t("password")}
-        />
-      </div>
-      <div className="flex flex-col">
-        <label>{t("confirm_password")}</label>
-        <input
-          className="btn-form my-2"
-          type="password"
-          placeholder={t("confirm_password")}
-        />
-      </div>
-      <div className="flex flex-col">
-        <div className="flex items-center mb-5 text-xs">
-          <input className="mr-2" type="checkbox" />
-          <span className="text-fourth"> {t("agree")}</span>
-          <span className="text-third ml-1">{t("privacy_link")} </span>
+      <form className="w-96">
+        <h1 className="mb-10 mt-16">Register</h1>
+        <h2>Create your account in a few clicks</h2>
+        <p className="mt-2 mb-5 text-fourth ">Welcome amongs us</p>
+        <div className="flex flex-col mb-3">
+          <label>Username</label>
+          <input className="btn-form my-2" type="text" placeholder="John Doe" />
         </div>
-      </div>
-      <div className="btn border-2 border-third bg-third text-secondary my-5">
-        {t("register_in")}
-      </div>
-      <p className="my-5 text-center">
-        {t("already_account")}
-        <span className="text-third"> {t("already_account_login")}</span>
-      </p>
-    </form>
+
+        <div className="flex flex-col mb-3">
+          <label>Password</label>
+          <input
+            className="btn-form my-2"
+            type="password"
+            placeholder="Password"
+          />
+        </div>
+        <div className="flex flex-col">
+          <label>Confirm password</label>
+          <input
+            className="btn-form my-2"
+            type="password"
+            placeholder="Confirm password"
+          />
+        </div>
+        <div className="flex flex-col">
+          <div className="flex items-center mb-5 text-xs">
+            <input className="mr-2" type="checkbox" />
+            <span className="text-fourth">I agree to the</span>
+            <span className="text-third ml-1">privacy policy</span>
+          </div>
+        </div>
+        <div className="btn border-2 border-third bg-third text-secondary my-5">
+          CREATE ACCOUNT
+        </div>
+        <p className="my-5 text-center">
+          Already have an account ?<span className="text-third"> Login</span>
+        </p>
+      </form>
+    </div>
   );
 };
 
