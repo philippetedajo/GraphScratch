@@ -13,3 +13,13 @@ export const Get_All_Posts = gql`
     }
   }
 `;
+
+export const Create_Post = gql`
+  mutation($input: CreatePostInput!) {
+    createPost(input: $input) {
+      id
+      title
+      body
+    }
+  }
+`;

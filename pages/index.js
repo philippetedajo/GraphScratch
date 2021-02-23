@@ -1,24 +1,28 @@
 import Head from "next/head";
 import { useState } from "react";
-import { useQuery } from "@apollo/client";
-import { Get_All_Posts } from "../utils/constants";
+import { useQuery, useMutation } from "@apollo/client";
+import { Get_All_Posts, Create_Post } from "../utils/constants";
 
 const Home = () => {
-  let options = {
-    paginate: {
-      page: 1,
-      limit: 5,
-    },
-  };
   const [postsField, setPostsFields] = useState({});
+
   const { loading, error, data } = useQuery(Get_All_Posts, {
-    variables: { options },
+    variables: {
+      options: {
+        paginate: {
+          page: 13,
+          limit: 8,
+        },
+      },
+    },
   });
+
+  const [createPost, { postData }] = useMutation(Create_Post);
 
   if (loading) return <div className="text-2xl">...loading</div>;
   if (error) `Error! ${error.message}`;
 
-  const posts = data.posts.data;
+  let posts = data.posts.data;
 
   const articlesList = posts.map((post, index) => (
     <div key={index} className="border-2 rounded my-2 w-2/3">
@@ -33,7 +37,15 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(postsField);
+
+    createPost({
+      variables: {
+        input: {
+          title: postsField.title,
+          body: postsField.body,
+        },
+      },
+    }).then((res) => console.log(res));
   };
 
   return (
@@ -42,7 +54,7 @@ const Home = () => {
         <title>Nextwind</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
+      <div className="mb-10">
         <form onSubmit={handleSubmit}>
           <label>
             title:
