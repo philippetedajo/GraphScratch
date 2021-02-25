@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useState } from "react";
 import { useQuery, useMutation } from "@apollo/client";
+import { useForm } from "react-hook-form";
 import { Get_All_Posts, Create_Post } from "../utils/constants";
 
 const Home = () => {
-  const [inputField, setInputField] = useState({});
+  const { register, handleSubmit, watch, errors } = useForm();
 
   //Get all post
   const { loading, error, data } = useQuery(Get_All_Posts, {
@@ -36,19 +36,14 @@ const Home = () => {
     </Link>
   ));
 
-  const handleOnChange = (e) => {
-    const { name, value } = e.target;
-    setInputField({ ...inputField, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const onSubmit = (data) => {
+    console.log(data);
 
     createPost({
       variables: {
         input: {
-          title: inputField.title,
-          body: inputField.body,
+          title: data.title,
+          body: data.body,
         },
       },
     }).then((res) => console.log(res));
@@ -62,12 +57,12 @@ const Home = () => {
       </Head>
       <div className="mb-10">
         <h2 className="mb-3">Create a post :</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <label className="mr-3">
             title:
             <input
               className="border rounded ml-2 pl-1"
-              onChange={handleOnChange}
+              ref={register}
               type="text"
               name="title"
             />
@@ -76,7 +71,7 @@ const Home = () => {
             body:
             <input
               className="border rounded ml-2 pl-1"
-              onChange={handleOnChange}
+              ref={register}
               type="text"
               name="body"
             />
