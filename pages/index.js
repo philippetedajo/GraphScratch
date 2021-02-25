@@ -5,7 +5,7 @@ import { useQuery, useMutation } from "@apollo/client";
 import { Get_All_Posts, Create_Post } from "../utils/constants";
 
 const Home = () => {
-  const [postsField, setPostsFields] = useState({});
+  const [inputField, setInputField] = useState({});
 
   //Get all post
   const { loading, error, data } = useQuery(Get_All_Posts, {
@@ -38,7 +38,7 @@ const Home = () => {
 
   const handleOnChange = (e) => {
     const { name, value } = e.target;
-    setPostsFields({ ...postsField, [name]: value });
+    setInputField({ ...inputField, [name]: value });
   };
 
   const handleSubmit = (e) => {
@@ -47,8 +47,8 @@ const Home = () => {
     createPost({
       variables: {
         input: {
-          title: postsField.title,
-          body: postsField.body,
+          title: inputField.title,
+          body: inputField.body,
         },
       },
     }).then((res) => console.log(res));
