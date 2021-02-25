@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { Get_All_Posts, Create_Post } from "../utils/constants";
 
 const Home = () => {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit } = useForm();
 
   //Get all post
   const { loading, error, data } = useQuery(Get_All_Posts, {
@@ -20,7 +20,7 @@ const Home = () => {
   });
 
   //Add on post
-  const [createPost, { postData }] = useMutation(Create_Post);
+  const [createPost] = useMutation(Create_Post);
 
   if (loading) return <div className="text-2xl">...loading</div>;
   if (error) `Error! ${error.message}`;
@@ -36,7 +36,7 @@ const Home = () => {
     </Link>
   ));
 
-  const onSubmit = (data) => {
+  const onSubmitCreatePost = (data) => {
     console.log(data);
 
     createPost({
@@ -57,7 +57,7 @@ const Home = () => {
       </Head>
       <div className="mb-10">
         <h2 className="mb-3">Create a post :</h2>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmitCreatePost)}>
           <label className="mr-3">
             title:
             <input
@@ -76,7 +76,11 @@ const Home = () => {
               name="body"
             />
           </label>
-          <input type="submit" value="Create a post" />
+          <input
+            className="cursor-pointer"
+            type="submit"
+            value="Create a post"
+          />
         </form>
       </div>
       <h2 className="mb-3">All post :</h2>

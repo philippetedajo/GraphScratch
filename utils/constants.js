@@ -38,6 +38,7 @@ export const Update_Post = gql`
   mutation($id: ID!, $input: UpdatePostInput!) {
     updatePost(id: $id, input: $input) {
       id
+      title
       body
     }
   }
