@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useMutation, useQuery } from "@apollo/client";
 import { useForm } from "react-hook-form";
-import { Get_Post, Update_Post } from "../../utils/constants";
+import { Get_Post, Update_Post, Delete_Post } from "../../utils/constants";
 
 const Post = () => {
   const prefill = {
@@ -31,12 +31,13 @@ const Post = () => {
   //Update a post
   const [updatePost] = useMutation(Update_Post);
 
+  //Delete a post
+  const [deletPost] = useMutation(Delete_Post);
+
   if (loading) return <div className="text-2xl">...loading</div>;
   if (error) `Error! ${error.message}`;
 
   const onSubmitUpdatePost = (data) => {
-    console.log(data);
-    console.log(id);
     updatePost({
       variables: {
         id: id,
@@ -46,6 +47,17 @@ const Post = () => {
         },
       },
     }).then((res) => console.log(res));
+  };
+
+  const handleDeletePost = () => {
+    deletPost({
+      variables: {
+        id: id,
+      },
+    }).then((res) => {
+      console.log(res);
+      Router.back();
+    });
   };
 
   return (
@@ -74,8 +86,11 @@ const Post = () => {
             name="body"
           />
         </label>
-        <input className="w-32" type="submit" value="Update a post" />
+        <input className="w-32 mb-5" type="submit" value="Update your post" />
       </form>
+      <button onClick={handleDeletePost} className="w-32 border">
+        Delete your post
+      </button>
     </div>
   );
 };
